@@ -8,55 +8,60 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* RegCortex™ Brand Colors - Professional Fintech Palette */
-    --background: 0 0% 100%;
-    --foreground: 215 70% 15%;
+    /* RegCortex™ Ultra-Modern Brand Colors */
+    --background: 0 0% 99%;
+    --foreground: 220 40% 12%;
 
     --card: 0 0% 100%;
-    --card-foreground: 215 70% 15%;
+    --card-foreground: 220 40% 12%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 215 70% 15%;
+    --popover-foreground: 220 40% 12%;
 
-    /* Deep Blue Primary - Professional Finance */
-    --primary: 215 70% 25%;
+    /* Vibrant Blue Primary - Next-Gen Finance */
+    --primary: 220 90% 56%;
     --primary-foreground: 0 0% 100%;
-    --primary-glow: 215 85% 45%;
+    --primary-glow: 225 95% 68%;
+    --primary-light: 225 100% 85%;
 
-    /* Teal Secondary - Modern Tech */
-    --secondary: 180 75% 35%;
+    /* Electric Purple Secondary - Innovation */
+    --secondary: 260 85% 65%;
     --secondary-foreground: 0 0% 100%;
 
-    /* Muted Grays - Clean Backgrounds */
-    --muted: 220 15% 96%;
-    --muted-foreground: 215 25% 45%;
+    /* Sophisticated Grays - Ultra Clean */
+    --muted: 220 20% 97%;
+    --muted-foreground: 220 25% 55%;
 
-    /* Accent Teal - Highlights */
-    --accent: 180 75% 35%;
-    --accent-foreground: 0 0% 100%;
+    /* Neon Cyan Accent - Future Tech */
+    --accent: 180 100% 50%;
+    --accent-foreground: 220 40% 12%;
 
     /* Status Colors */
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
     /* Borders & Inputs */
-    --border: 220 15% 88%;
-    --input: 220 15% 88%;
-    --ring: 215 70% 25%;
+    --border: 220 25% 92%;
+    --input: 220 25% 92%;
+    --ring: 220 90% 56%;
 
-    /* Gradients - Neon Fintech Effects */
-    --gradient-primary: linear-gradient(135deg, hsl(215, 70%, 25%) 0%, hsl(180, 75%, 35%) 100%);
-    --gradient-hero: linear-gradient(135deg, hsl(215, 85%, 45%) 0%, hsl(270, 75%, 60%) 50%, hsl(180, 85%, 45%) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(0, 0%, 100%) 0%, hsl(220, 15%, 98%) 100%);
+    /* Next-Gen Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(220, 90%, 56%) 0%, hsl(260, 85%, 65%) 50%, hsl(180, 100%, 50%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(220, 90%, 56%) 0%, hsl(260, 85%, 65%) 30%, hsl(300, 85%, 70%) 70%, hsl(180, 100%, 50%) 100%);
+    --gradient-card: linear-gradient(145deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.6) 100%);
+    --gradient-glass: linear-gradient(145deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+    --gradient-mesh: radial-gradient(circle at 20% 80%, hsl(220, 90%, 56% / 0.1) 0%, transparent 50%), radial-gradient(circle at 80% 20%, hsl(260, 85%, 65% / 0.1) 0%, transparent 50%);
     
-    /* Shadows - Professional Depth */
-    --shadow-card: 0 4px 20px -2px hsl(215, 70%, 25% / 0.1);
-    --shadow-glow: 0 0 40px hsl(215, 85%, 45% / 0.3);
-    --shadow-button: 0 8px 25px -5px hsl(215, 70%, 25% / 0.4);
+    /* Ultra-Modern Shadows */
+    --shadow-card: 0 8px 32px -8px hsl(220, 90%, 56% / 0.15);
+    --shadow-glow: 0 0 60px hsl(220, 90%, 56% / 0.4);
+    --shadow-button: 0 12px 40px -10px hsl(220, 90%, 56% / 0.5);
+    --shadow-glass: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 8px 32px -8px hsl(220, 90%, 56% / 0.1);
 
-    /* Animation Timing */
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-glow: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    /* Fluid Animation System */
+    --transition-smooth: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --transition-glow: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    --transition-bounce: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     --radius: 0.5rem;
 
@@ -127,34 +132,93 @@ All colors MUST be HSL.
 }
 
 @layer components {
-  /* RegCortex™ Component Styles */
+  /* RegCortex™ Ultra-Modern Component System */
   .gradient-text {
-    @apply bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent;
+    background: linear-gradient(135deg, hsl(220, 90%, 56%), hsl(260, 85%, 65%), hsl(180, 100%, 50%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 200%;
+    animation: gradient-flow 3s ease-in-out infinite;
   }
   
   .hero-glow {
     background: var(--gradient-hero);
     box-shadow: var(--shadow-glow);
     transition: var(--transition-glow);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
   }
   
   .hero-glow:hover {
-    box-shadow: 0 0 50px hsl(215, 85%, 45% / 0.5);
-    transform: translateY(-2px);
+    box-shadow: 0 0 80px hsl(220, 90%, 56% / 0.6), 0 0 120px hsl(260, 85%, 65% / 0.3);
+    transform: translateY(-3px) scale(1.02);
   }
   
   .card-elevated {
     background: var(--gradient-card);
-    box-shadow: var(--shadow-card);
-    transition: var(--transition-smooth);
+    box-shadow: var(--shadow-glass);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: var(--transition-bounce);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .card-elevated::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.8s;
+  }
+  
+  .card-elevated:hover::before {
+    left: 100%;
   }
   
   .card-elevated:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 30px -5px hsl(215, 70%, 25% / 0.15);
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: var(--shadow-glow);
+    border-color: hsl(220, 90%, 56% / 0.4);
   }
 
   .section-gradient {
-    background: linear-gradient(180deg, hsl(220, 15%, 98%) 0%, hsl(0, 0%, 100%) 100%);
+    background: var(--gradient-mesh), linear-gradient(180deg, hsl(220, 20%, 99%) 0%, hsl(0, 0%, 100%) 100%);
+    position: relative;
   }
+  
+  .glass-morphism {
+    background: var(--gradient-glass);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: var(--shadow-glass);
+  }
+  
+  .floating-element {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+}
+
+@keyframes gradient-flow {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  33% { transform: translateY(-20px) rotate(2deg); }
+  66% { transform: translateY(-10px) rotate(-2deg); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px hsl(220, 90%, 56% / 0.3); }
+  50% { box-shadow: 0 0 40px hsl(220, 90%, 56% / 0.6), 0 0 60px hsl(260, 85%, 65% / 0.3); }
 }
