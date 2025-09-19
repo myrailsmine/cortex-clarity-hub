@@ -27,8 +27,8 @@ const Hero = () => {
       <div className="relative z-10 max-w-6xl mx-auto px-6 text-center text-white">
         <div className="mb-12">
           
-          <h1 className="text-6xl md:text-8xl font-bold leading-tight mb-8">
-            <span className="block gradient-text drop-shadow-2xl">RegCortex™</span>
+          <h1 className="text-6xl md:text-8xl font-bold leading-relaxed mb-8 py-2">
+            <span className="block gradient-text drop-shadow-2xl py-1">RegCortex™</span>
             <span className="block text-4xl md:text-6xl font-light text-white/95 mt-4 drop-shadow-lg">
               Turning Basel Complexity into Business Clarity
             </span>
