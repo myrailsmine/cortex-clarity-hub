@@ -26,14 +26,6 @@ const Hero = () => {
       {/* Main Content */}
       <div className="relative z-10 max-w-6xl mx-auto px-6 text-center text-white">
         <div className="mb-12">
-          {/* Logo */}
-          <div className="mb-8 flex justify-center">
-            <img 
-              src={regcortexLogo} 
-              alt="RegCortex Logo" 
-              className="w-24 h-24 md:w-32 md:h-32 drop-shadow-2xl floating-element"
-            />
-          </div>
           
           <h1 className="text-6xl md:text-8xl font-bold leading-tight mb-8">
             <span className="block gradient-text drop-shadow-2xl">RegCortex™</span>
