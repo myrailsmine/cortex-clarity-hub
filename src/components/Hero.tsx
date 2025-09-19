@@ -28,7 +28,7 @@ const Hero = () => {
         <div className="mb-12">
           
           <h1 className="text-6xl md:text-8xl font-bold leading-relaxed mb-8 py-2">
-            <span className="block gradient-text drop-shadow-2xl py-1">RegCortex™</span>
+            <span className="inline-block gradient-text drop-shadow-2xl leading-[1.2] pb-2 whitespace-nowrap">RegCortex™</span>
             <span className="block text-4xl md:text-6xl font-light text-white/95 mt-4 drop-shadow-lg">
               Turning Basel Complexity into Business Clarity
             </span>
